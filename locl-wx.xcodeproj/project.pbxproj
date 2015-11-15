@@ -12,6 +12,9 @@
 		04A69A551BF94B1900265CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A531BF94B1900265CAC /* Main.storyboard */; };
 		04A69A571BF94B1900265CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A561BF94B1900265CAC /* Assets.xcassets */; };
 		04A69A5A1BF94B1900265CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A581BF94B1900265CAC /* LaunchScreen.storyboard */; };
+		04A69A641BF94B5500265CAC /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A631BF94B5500265CAC /* SampleResponse.json */; };
+		04A69A6B1BF94C4100265CAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69A6A1BF94C4100265CAC /* Constants.swift */; };
+		76A4D1EC45AF655561E75B9B /* Pods_locl_wx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC749EAB01573E615DF6ED95 /* Pods_locl_wx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		04A69A561BF94B1900265CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A69A591BF94B1900265CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A69A5B1BF94B1900265CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A69A631BF94B5500265CAC /* SampleResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
+		04A69A6A1BF94C4100265CAC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		743417AEC1AB769FD06D76CE /* Pods-locl-wx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locl-wx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx.debug.xcconfig"; sourceTree = "<group>"; };
+		BFEB1CBB68A7B7D3DA64FB4E /* Pods-locl-wx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locl-wx.release.xcconfig"; path = "Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx.release.xcconfig"; sourceTree = "<group>"; };
+		FC749EAB01573E615DF6ED95 /* Pods_locl_wx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locl_wx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A4D1EC45AF655561E75B9B /* Pods_locl_wx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				04A69A4E1BF94B1900265CAC /* locl-wx */,
 				04A69A4D1BF94B1900265CAC /* Products */,
+				B14A184F5E076D22BD957B51 /* Pods */,
+				600B2167839D29D3D561F2EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,73 @@
 		04A69A4E1BF94B1900265CAC /* locl-wx */ = {
 			isa = PBXGroup;
 			children = (
+				04A69A681BF94BD500265CAC /* Resources */,
+				04A69A691BF94BDD00265CAC /* Util */,
+				04A69A671BF94BC900265CAC /* Model */,
+				04A69A661BF94BBD00265CAC /* View */,
+				04A69A651BF94BB500265CAC /* Controller */,
 				04A69A4F1BF94B1900265CAC /* AppDelegate.swift */,
-				04A69A511BF94B1900265CAC /* ViewController.swift */,
-				04A69A531BF94B1900265CAC /* Main.storyboard */,
 				04A69A561BF94B1900265CAC /* Assets.xcassets */,
-				04A69A581BF94B1900265CAC /* LaunchScreen.storyboard */,
 				04A69A5B1BF94B1900265CAC /* Info.plist */,
+				04A69A631BF94B5500265CAC /* SampleResponse.json */,
 			);
 			path = "locl-wx";
+			sourceTree = "<group>";
+		};
+		04A69A651BF94BB500265CAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A511BF94B1900265CAC /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04A69A661BF94BBD00265CAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A581BF94B1900265CAC /* LaunchScreen.storyboard */,
+				04A69A531BF94B1900265CAC /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		04A69A671BF94BC900265CAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		04A69A681BF94BD500265CAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		04A69A691BF94BDD00265CAC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A6A1BF94C4100265CAC /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		600B2167839D29D3D561F2EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC749EAB01573E615DF6ED95 /* Pods_locl_wx.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B14A184F5E076D22BD957B51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				743417AEC1AB769FD06D76CE /* Pods-locl-wx.debug.xcconfig */,
+				BFEB1CBB68A7B7D3DA64FB4E /* Pods-locl-wx.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "locl-wx" */;
 			buildPhases = (
+				B94D8781CC972DF39796331C /* Check Pods Manifest.lock */,
 				04A69A481BF94B1900265CAC /* Sources */,
 				04A69A491BF94B1900265CAC /* Frameworks */,
 				04A69A4A1BF94B1900265CAC /* Resources */,
+				2940BD8C819278F2DB2ABC71 /* Embed Pods Frameworks */,
+				2F002BBA7C9BCA3430219088 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,10 +198,59 @@
 				04A69A5A1BF94B1900265CAC /* LaunchScreen.storyboard in Resources */,
 				04A69A571BF94B1900265CAC /* Assets.xcassets in Resources */,
 				04A69A551BF94B1900265CAC /* Main.storyboard in Resources */,
+				04A69A641BF94B5500265CAC /* SampleResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2940BD8C819278F2DB2ABC71 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F002BBA7C9BCA3430219088 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B94D8781CC972DF39796331C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04A69A481BF94B1900265CAC /* Sources */ = {
@@ -137,6 +259,7 @@
 			files = (
 				04A69A521BF94B1900265CAC /* ViewController.swift in Sources */,
 				04A69A501BF94B1900265CAC /* AppDelegate.swift in Sources */,
+				04A69A6B1BF94C4100265CAC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +370,7 @@
 		};
 		04A69A5F1BF94B1900265CAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743417AEC1AB769FD06D76CE /* Pods-locl-wx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "locl-wx/Info.plist";
@@ -258,6 +382,7 @@
 		};
 		04A69A601BF94B1900265CAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEB1CBB68A7B7D3DA64FB4E /* Pods-locl-wx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "locl-wx/Info.plist";
@@ -286,6 +411,7 @@
 				04A69A601BF94B1900265CAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

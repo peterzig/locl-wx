@@ -1,0 +1,41 @@
+{
+    "coord": {
+        "lon": -89.75,
+        "lat": 36.23
+    },
+    "weather": [
+                {
+                "id": 802,
+                "main": "Clouds",
+                "description": "scattered clouds",
+                "icon": "03n"
+                }
+                ],
+    "base": "cmc stations",
+    "main": {
+        "temp": 51.35,
+        "pressure": 1028.48,
+        "humidity": 47,
+        "temp_min": 51.35,
+        "temp_max": 51.35,
+        "sea_level": 1038.21,
+        "grnd_level": 1028.48
+    },
+    "wind": {
+        "speed": 6.7,
+        "deg": 139.512
+    },
+    "clouds": {
+        "all": 32
+    },
+    "dt": 1447628822,
+    "sys": {
+        "message": 0.0106,
+        "country": "US",
+        "sunrise": 1447591001,
+        "sunset": 1447627824
+    },
+    "id": 4389910,
+    "name": "Hayti",
+    "cod": 200
+}
