@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		040C3EDC1BF95978000EFEBD /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C3EDB1BF95978000EFEBD /* Weather.swift */; };
+		047D9D5D1BFA273700E1405F /* DataExtracted.txt in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D5C1BFA273700E1405F /* DataExtracted.txt */; };
+		047D9D5F1BFA299300E1405F /* WeatherIcons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D5E1BFA299300E1405F /* WeatherIcons.txt */; };
+		047D9D611BFA327C00E1405F /* Attribution in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D601BFA327C00E1405F /* Attribution */; };
+		047D9D6B1BFA431B00E1405F /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D681BFA431B00E1405F /* Montserrat-Bold.otf */; };
+		047D9D6C1BFA431B00E1405F /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D691BFA431B00E1405F /* Montserrat-Light.otf */; };
+		047D9D6D1BFA431B00E1405F /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 047D9D6A1BFA431B00E1405F /* Montserrat-Regular.otf */; };
 		04A69A501BF94B1900265CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69A4F1BF94B1900265CAC /* AppDelegate.swift */; };
 		04A69A521BF94B1900265CAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69A511BF94B1900265CAC /* ViewController.swift */; };
 		04A69A551BF94B1900265CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A531BF94B1900265CAC /* Main.storyboard */; };
@@ -20,7 +26,13 @@
 
 /* Begin PBXFileReference section */
 		040C3EDB1BF95978000EFEBD /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		04A69A4C1BF94B1900265CAC /* locl-wx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "locl-wx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		047D9D5C1BFA273700E1405F /* DataExtracted.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataExtracted.txt; sourceTree = "<group>"; };
+		047D9D5E1BFA299300E1405F /* WeatherIcons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WeatherIcons.txt; sourceTree = "<group>"; };
+		047D9D601BFA327C00E1405F /* Attribution */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attribution; sourceTree = "<group>"; };
+		047D9D681BFA431B00E1405F /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		047D9D691BFA431B00E1405F /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		047D9D6A1BFA431B00E1405F /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		04A69A4C1BF94B1900265CAC /* LocL wX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LocL wX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A69A4F1BF94B1900265CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A69A511BF94B1900265CAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04A69A541BF94B1900265CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +71,7 @@
 		04A69A4D1BF94B1900265CAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04A69A4C1BF94B1900265CAC /* locl-wx.app */,
+				04A69A4C1BF94B1900265CAC /* LocL wX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,7 +87,6 @@
 				04A69A4F1BF94B1900265CAC /* AppDelegate.swift */,
 				04A69A561BF94B1900265CAC /* Assets.xcassets */,
 				04A69A5B1BF94B1900265CAC /* Info.plist */,
-				04A69A631BF94B5500265CAC /* SampleResponse.json */,
 			);
 			path = "locl-wx";
 			sourceTree = "<group>";
@@ -108,6 +119,13 @@
 		04A69A681BF94BD500265CAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				047D9D681BFA431B00E1405F /* Montserrat-Bold.otf */,
+				047D9D691BFA431B00E1405F /* Montserrat-Light.otf */,
+				047D9D6A1BFA431B00E1405F /* Montserrat-Regular.otf */,
+				04A69A631BF94B5500265CAC /* SampleResponse.json */,
+				047D9D5C1BFA273700E1405F /* DataExtracted.txt */,
+				047D9D5E1BFA299300E1405F /* WeatherIcons.txt */,
+				047D9D601BFA327C00E1405F /* Attribution */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -140,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04A69A4B1BF94B1900265CAC /* locl-wx */ = {
+		04A69A4B1BF94B1900265CAC /* LocL wX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "locl-wx" */;
+			buildConfigurationList = 04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "LocL wX" */;
 			buildPhases = (
 				B94D8781CC972DF39796331C /* Check Pods Manifest.lock */,
 				04A69A481BF94B1900265CAC /* Sources */,
@@ -155,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = "locl-wx";
+			name = "LocL wX";
 			productName = "locl-wx";
-			productReference = 04A69A4C1BF94B1900265CAC /* locl-wx.app */;
+			productReference = 04A69A4C1BF94B1900265CAC /* LocL wX.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04A69A4B1BF94B1900265CAC /* locl-wx */,
+				04A69A4B1BF94B1900265CAC /* LocL wX */,
 			);
 		};
 /* End PBXProject section */
@@ -198,10 +216,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047D9D5F1BFA299300E1405F /* WeatherIcons.txt in Resources */,
 				04A69A5A1BF94B1900265CAC /* LaunchScreen.storyboard in Resources */,
 				04A69A571BF94B1900265CAC /* Assets.xcassets in Resources */,
+				047D9D6D1BFA431B00E1405F /* Montserrat-Regular.otf in Resources */,
 				04A69A551BF94B1900265CAC /* Main.storyboard in Resources */,
+				047D9D611BFA327C00E1405F /* Attribution in Resources */,
+				047D9D5D1BFA273700E1405F /* DataExtracted.txt in Resources */,
 				04A69A641BF94B5500265CAC /* SampleResponse.json in Resources */,
+				047D9D6B1BFA431B00E1405F /* Montserrat-Bold.otf in Resources */,
+				047D9D6C1BFA431B00E1405F /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +405,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nine42.locl-wx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -393,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nine42.locl-wx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -408,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "locl-wx" */ = {
+		04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "LocL wX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04A69A5F1BF94B1900265CAC /* Debug */,

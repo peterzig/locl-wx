@@ -1,0 +1,16 @@
+Location: Bragg City, Mo
+Zip Code: 63827
+Day: Monday
+Date: November 16, 2015
+Time: 8:44AM
+Station City: Hayti
+Short Desc: Rain
+Long Desc: light rain
+Icon: 10d
+Temperature: 49
+Pressure: 30.34
+Humidity: 80
+Wind Speed: 10
+Wind Direction: ESE
+Sunrise: 6:37AM
+Sunset: 4:49PM

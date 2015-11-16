@@ -17,6 +17,7 @@ class Weather {
     private var _shortDescription: String!
     private var _longDescription: String!
     private var _icon: String!
+    private var _day: String!
     private var _date: String!
     private var _time: String!
     private var _sunrise: String!
@@ -25,9 +26,28 @@ class Weather {
     private var _humidity: String!
     private var _pressure: String!
     private var _windSpeed: String!
-    private var _windDirection: String!
+    private var _windDirection: WindDirection!
     
     private var _weatherURL: String!
+    
+    enum WindDirection {
+        case N
+        case NNE
+        case NE
+        case ENE
+        case E
+        case ESE
+        case SE
+        case SSE
+        case S
+        case SSW
+        case SW
+        case WSW
+        case W
+        case WNW
+        case NW
+        case NNW
+    }
     
     var windSpeed: String {
         get {
@@ -35,7 +55,7 @@ class Weather {
         }
     }
     
-    var windDirection: String {
+    var windDirection: WindDirection {
         get {
             return _windDirection
         }
@@ -86,6 +106,15 @@ class Weather {
                 return ""
             }
             return _icon
+        }
+    }
+    
+    var day: String {
+        get {
+            if _day == nil {
+                return ""
+            }
+            return _day
         }
     }
     
@@ -173,10 +202,13 @@ class Weather {
                 
                 if let dt = dict["dt"] as? Double {
                     let date = NSDate(timeIntervalSince1970: dt)
+                    let dayFormatter = NSDateFormatter()
                     let dateFormatter = NSDateFormatter()
                     let timeFormatter = NSDateFormatter()
-                    dateFormatter.dateFormat = "EEEE"
-                    timeFormatter.dateFormat = "h:mma"
+                    dayFormatter.dateFormat = "EEEE"
+                    dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+                    timeFormatter.dateFormat = "h:mm a"
+                    self._day = dayFormatter.stringFromDate(date)
                     self._date = dateFormatter.stringFromDate(date)
                     self._time = timeFormatter.stringFromDate(date)
                 
@@ -193,7 +225,7 @@ class Weather {
                     }
                     
                     if let longDesc = weatherDetl[0]["description"] as? String {
-                        self._longDescription = longDesc
+                        self._longDescription = longDesc.capitalizedString
                     }
                     
                     if let icon = weatherDetl[0]["icon"] as? String {
@@ -224,8 +256,44 @@ class Weather {
                     }
                     
                     if let direc = windDetl["deg"] as? Double {
-                        self._windDirection = NSString(format: "%.0f", direc) as String
-                        
+                        switch (direc) {
+                        case 348.75...360:
+                            self._windDirection = WindDirection.N
+                        case 0..<11.25:
+                            self._windDirection = WindDirection.N
+                        case 11.25..<33.75:
+                            self._windDirection = WindDirection.NNE
+                        case 33.75..<56.25:
+                            self._windDirection = WindDirection.NE
+                        case 56.25..<78.75:
+                            self._windDirection = WindDirection.ENE
+                        case 78.75..<101.25:
+                            self._windDirection = WindDirection.E
+                        case 101.25..<123.75:
+                            self._windDirection = WindDirection.ESE
+                        case 123.75..<146.25:
+                            self._windDirection = WindDirection.SE
+                        case 146.25..<168.75:
+                            self._windDirection = WindDirection.SSE
+                        case 168.75..<191.25:
+                            self._windDirection = WindDirection.S
+                        case 191.25..<213.75:
+                            self._windDirection = WindDirection.SSW
+                        case 213.75..<236.25:
+                            self._windDirection = WindDirection.SW
+                        case 236.25..<258.75:
+                            self._windDirection = WindDirection.WSW
+                        case 258.75..<281.25:
+                            self._windDirection = WindDirection.W
+                        case 281.25..<303.75:
+                            self._windDirection = WindDirection.WNW
+                        case 303.75..<326.25:
+                            self._windDirection = WindDirection.NW
+                        case 326.25..<348.75:
+                            self._windDirection = WindDirection.NNW
+                        default:
+                            self._windDirection = WindDirection.N
+                        }
                     }
                 }
                 
