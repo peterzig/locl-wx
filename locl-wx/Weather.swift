@@ -51,12 +51,19 @@ class Weather {
     
     var windSpeed: String {
         get {
+            if _windSpeed == nil {
+                return ""
+            }
             return _windSpeed
         }
     }
     
     var windDirection: WindDirection {
         get {
+            if _windDirection == nil {
+                // default to North if no data is available
+                return WindDirection.N
+            }
             return _windDirection
         }
     }
@@ -198,9 +205,14 @@ class Weather {
         Alamofire.request(.GET, url).responseJSON { response in
             let result = response.result
             
+            // Top level dict
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 if let dt = dict["dt"] as? Double {
+                    // Format unix datestamp into three different objects, ie.
+                    // Date (November 15, 2015
+                    // Day (Monday)
+                    // Time (9:42 AM)
                     let date = NSDate(timeIntervalSince1970: dt)
                     let dayFormatter = NSDateFormatter()
                     let dateFormatter = NSDateFormatter()
@@ -219,6 +231,7 @@ class Weather {
             
                 }
                 
+                // Array of dictionaries within main dict
                 if let weatherDetl = dict["weather"] as? [Dictionary<String, AnyObject>] where weatherDetl.count > 0 {
                     if let shortDesc = weatherDetl[0]["main"] as? String {
                         self._shortDescription = shortDesc
@@ -249,12 +262,14 @@ class Weather {
                     }
                 }
                 
+                // Dictionary contained in top level dict
                 if let windDetl = dict["wind"] as? Dictionary<String, AnyObject> {
                     if let speed = windDetl["speed"] as? Double {
                         self._windSpeed = NSString(format: "%.0f", speed) as String
                         
                     }
                     
+                    // Assign wind direction based on the degrees we receive
                     if let direc = windDetl["deg"] as? Double {
                         switch (direc) {
                         case 348.75...360:
@@ -297,7 +312,10 @@ class Weather {
                     }
                 }
                 
+                // Dictionary contained in top level dict
                 if let sysDetl = dict["sys"] as? Dictionary<String, AnyObject> {
+                    
+                    // format sunrise time (ex 6:42AM)
                     if let sunrise = sysDetl["sunrise"] as? Double {
                         let date = NSDate(timeIntervalSince1970: sunrise)
                         let timeFormatter = NSDateFormatter()
@@ -305,6 +323,7 @@ class Weather {
                         self._sunrise = timeFormatter.stringFromDate(date)
                     }
                     
+                    // format sunset time (ex 4:49PM)
                     if let sunset = sysDetl["sunset"] as? Double {
                         let date = NSDate(timeIntervalSince1970: sunset)
                         let timeFormatter = NSDateFormatter()
@@ -312,8 +331,9 @@ class Weather {
                         self._sunset = timeFormatter.stringFromDate(date)
                     }
                 }
-                
             }
+            // Call code in closeure 
+            // once we have completed
             completed()
         }
     }

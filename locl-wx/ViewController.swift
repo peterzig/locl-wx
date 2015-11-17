@@ -27,11 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create a subtle shadow underneath header view
         headerView.layer.shadowColor = UIColor.blackColor().CGColor
         headerView.layer.shadowOffset = CGSizeZero
         headerView.layer.shadowRadius = 3
         headerView.layer.shadowOpacity = 1
         
+        // Create our weather object and then
+        // fire off web request
         weather = Weather(location: "Bragg City, Mo", zipcode: "63827")
         weather.downloadWeatherDetails { () -> () in
             self.updateUI()
@@ -40,9 +43,15 @@ class ViewController: UIViewController {
 
 
     func updateUI() {
+        
+        // At this point all the data is there, we just need
+        // to do some minor manipulation and then update our 
+        // labels and image.
         dayLbl.text = "\(weather.time) \(weather.day)"
         descriptionLbl.text = weather.shortDescription
         temperatureLbl.text = "\(weather.temp)°"
+        // Image names in Assets.xcassets all correspond to icon
+        // names returned by api.
         weatherIconImg.image = UIImage(named: weather.icon)
         sunriseLbl.text = weather.sunrise
         sunsetLbl.text = weather.sunset
@@ -50,23 +59,6 @@ class ViewController: UIViewController {
         windDirectionLbl.text = "\(weather.windDirection)"
         humidityLbl.text = "\(weather.humidity)%"
         barometerLbl.text = "\(weather.pressure)"
-        
-//        print("Location: \(weather.location)")
-//        print("Zip Code: \(weather.zipcode)")
-//        print("Day: \(weather.day)")
-//        print("Date: \(weather.date)")
-//        print("Time: \(weather.time)")
-//        print("Station City: \(weather.name)")
-//        print("Short Desc: \(weather.shortDescription)")
-//        print("Long Desc: \(weather.longDescription)")
-//        print("Icon: \(weather.icon)")
-//        print("Temperature: \(weather.temp)")
-//        print("Pressure: \(weather.pressure)")
-//        print("Humidity: \(weather.humidity)")
-//        print("Wind Speed: \(weather.windSpeed)")
-//        print("Wind Direction: \(weather.windDirection)")
-//        print("Sunrise: \(weather.sunrise)")
-//        print("Sunset: \(weather.sunset)")
 
     }
 }
