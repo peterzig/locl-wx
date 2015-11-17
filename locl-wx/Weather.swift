@@ -70,6 +70,9 @@ class Weather {
     
     var location: String {
         get {
+            if _location == nil {
+                return ""
+            }
             return _location
         }
     }
@@ -188,10 +191,8 @@ class Weather {
         }
     }
     
-    init(location: String, zipcode: String) {
-        self._location = "Bragg City, Mo"
-        self._zipcode = URL_ZIP
-        
+    init(zipcode: String) {
+        self._zipcode = zipcode
         self._weatherURL = "\(URL_BASE)\(self._zipcode)\(URL_UNITS)\(API_KEY)"
     }
     

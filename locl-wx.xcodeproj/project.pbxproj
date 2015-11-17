@@ -21,6 +21,7 @@
 		04A69A5A1BF94B1900265CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A581BF94B1900265CAC /* LaunchScreen.storyboard */; };
 		04A69A641BF94B5500265CAC /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A69A631BF94B5500265CAC /* SampleResponse.json */; };
 		04A69A6B1BF94C4100265CAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69A6A1BF94C4100265CAC /* Constants.swift */; };
+		04C4C0EB1BFBC67F00BF3B69 /* addLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4C0EA1BFBC67F00BF3B69 /* addLocationVC.swift */; };
 		76A4D1EC45AF655561E75B9B /* Pods_locl_wx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC749EAB01573E615DF6ED95 /* Pods_locl_wx.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		04A69A5B1BF94B1900265CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A69A631BF94B5500265CAC /* SampleResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
 		04A69A6A1BF94C4100265CAC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04C4C0EA1BFBC67F00BF3B69 /* addLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addLocationVC.swift; sourceTree = "<group>"; };
 		743417AEC1AB769FD06D76CE /* Pods-locl-wx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locl-wx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx.debug.xcconfig"; sourceTree = "<group>"; };
 		BFEB1CBB68A7B7D3DA64FB4E /* Pods-locl-wx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locl-wx.release.xcconfig"; path = "Pods/Target Support Files/Pods-locl-wx/Pods-locl-wx.release.xcconfig"; sourceTree = "<group>"; };
 		FC749EAB01573E615DF6ED95 /* Pods_locl_wx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locl_wx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				04A69A511BF94B1900265CAC /* ViewController.swift */,
+				04C4C0EA1BFBC67F00BF3B69 /* addLocationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				040C3EDC1BF95978000EFEBD /* Weather.swift in Sources */,
 				04A69A521BF94B1900265CAC /* ViewController.swift in Sources */,
 				04A69A501BF94B1900265CAC /* AppDelegate.swift in Sources */,
+				04C4C0EB1BFBC67F00BF3B69 /* addLocationVC.swift in Sources */,
 				04A69A6B1BF94C4100265CAC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

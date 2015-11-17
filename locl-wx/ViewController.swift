@@ -11,6 +11,7 @@ import SwiftSpinner
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var dayLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var temperatureLbl: UILabel!
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var backgroundImg: UIImageView!
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var zipcode: String!
     var weather: Weather!
 
     override func viewDidLoad() {
@@ -36,11 +39,37 @@ class ViewController: UIViewController {
         headerView.layer.shadowRadius = 3
         headerView.layer.shadowOpacity = 1
         
+        // Grab the zipcode from NSUserDefaults
+        // if there is one
+        if let zip = defaults.objectForKey("zipcode") as? String {
+            zipcode = zip
+        } else {
+            // Cupertino if we can't load one from defaults
+            zipcode = "95014"
+        }
+        
         // Create our weather object and then
         // fire off web request
-        weather = Weather(location: "Bragg City, Mo", zipcode: "63827")
+        weather = Weather(zipcode: zipcode)
         
-        self.refreshData()
+//        self.refreshData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Called every time the view appears on the screen...
+        // if the zipcode hasn't changed, just refresh the data.
+        if zipcode == defaults.objectForKey("zipcode") as? String {
+            self.refreshData()
+        } else {
+            // If the zipcode has changed, assign it, create a new
+            // Weather() object and refresh the data.
+            if let zip = defaults.objectForKey("zipcode") as? String {
+                zipcode = zip
+            }
+            weather = Weather(zipcode: zipcode)
+            self.refreshData()
+        }
+        
     }
 
     func updateUI() {
@@ -48,7 +77,16 @@ class ViewController: UIViewController {
         // At this point all the data is there, we just need
         // to do some minor manipulation and then update our 
         // labels and image.
-        dayLbl.text = "Data from: \(weather.time) \(weather.day)"
+        
+        // First check to see if we grabbed the location name
+        // from the api. Location name will be the nearest
+        // weather station to the zip code entered.
+        if weather.name == "" {
+            locationLbl.text = "Data Not Available"
+        } else {
+            locationLbl.text = weather.name
+        }
+        dayLbl.text = "As Of: \(weather.time) \(weather.day)"
         descriptionLbl.text = weather.shortDescription
         temperatureLbl.text = "\(weather.temp)°"
         // Image names in Assets.xcassets all correspond to icon
