@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         // Create our weather object and then
         // fire off web request
         weather = Weather(location: "Bragg City, Mo", zipcode: "63827")
+        
         self.refreshData()
     }
 
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
         // At this point all the data is there, we just need
         // to do some minor manipulation and then update our 
         // labels and image.
-        dayLbl.text = "\(weather.time) \(weather.day)"
+        dayLbl.text = "Data from: \(weather.time) \(weather.day)"
         descriptionLbl.text = weather.shortDescription
         temperatureLbl.text = "\(weather.temp)°"
         // Image names in Assets.xcassets all correspond to icon
