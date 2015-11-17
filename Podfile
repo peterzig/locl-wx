@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'locl-wx' do
 pod 'Alamofire', '~> 3.0'
+pod 'SwiftSpinner'
 end
 

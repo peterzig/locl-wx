@@ -25,7 +25,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocL_wX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Locl_wX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,15 +34,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SunnyDayBG" translatesAutoresizingMaskIntoConstraints="NO" id="s9r-ku-TH7">
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClearBG" translatesAutoresizingMaskIntoConstraints="NO" id="s9r-ku-TH7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bo2-H9-rg6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF5-Sb-SDN">
+                                        <rect key="frame" x="20" y="35" width="30" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3HG-xt-IPO"/>
+                                            <constraint firstAttribute="width" constant="30" id="j4c-AZ-wMO"/>
+                                        </constraints>
+                                        <state key="normal" image="CloudRefresh"/>
+                                        <connections>
+                                            <action selector="updateBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fw5-Bt-0pS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.16078431372549018" green="0.44313725490196076" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="sF5-Sb-SDN" firstAttribute="leading" secondItem="Bo2-H9-rg6" secondAttribute="leading" constant="20" id="rMq-18-cg1"/>
                                     <constraint firstAttribute="height" constant="100" id="w8j-kg-agh"/>
                                 </constraints>
                             </view>
@@ -358,6 +373,7 @@
                             <constraint firstItem="tiJ-ke-SNC" firstAttribute="centerX" secondItem="4Bb-BQ-uIZ" secondAttribute="centerX" id="aAx-5j-PkC"/>
                             <constraint firstItem="WB9-s3-xaz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bWS-mK-dYe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s9r-ku-TH7" secondAttribute="bottom" id="c5V-rp-W7r"/>
+                            <constraint firstItem="WB9-s3-xaz" firstAttribute="centerY" secondItem="sF5-Sb-SDN" secondAttribute="centerY" id="dJl-6Z-zGx"/>
                             <constraint firstAttribute="trailing" secondItem="s9r-ku-TH7" secondAttribute="trailing" id="doW-Zm-Jk0"/>
                             <constraint firstItem="WB9-s3-xaz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjA-wc-RZw"/>
                             <constraint firstItem="jLO-W5-oyb" firstAttribute="top" secondItem="8vR-2I-TFq" secondAttribute="bottom" constant="15" id="hkc-QS-CyQ"/>
@@ -386,6 +402,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="backgroundImg" destination="s9r-ku-TH7" id="Nwm-2F-66E"/>
                         <outlet property="barometerLbl" destination="4LM-EF-zxr" id="7Vt-fI-pa6"/>
                         <outlet property="dayLbl" destination="4nl-F0-gm8" id="gXN-ht-NhO"/>
                         <outlet property="descriptionLbl" destination="AAY-vO-mv5" id="Ld3-ET-9Z8"/>
@@ -407,9 +424,10 @@
     <resources>
         <image name="01d" width="70" height="70"/>
         <image name="Barometer" width="230" height="510"/>
+        <image name="ClearBG" width="1662" height="1545"/>
+        <image name="CloudRefresh" width="108" height="103"/>
         <image name="Humidity" width="242" height="538"/>
         <image name="MapPin" width="90" height="64"/>
-        <image name="SunnyDayBG" width="1662" height="1545"/>
         <image name="Sunrise" width="100" height="75"/>
         <image name="Sunset" width="100" height="75"/>
         <image name="wind" width="100" height="64"/>

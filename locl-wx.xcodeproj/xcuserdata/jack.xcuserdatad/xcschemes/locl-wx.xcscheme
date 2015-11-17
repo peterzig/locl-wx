@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04A69A4B1BF94B1900265CAC"
-               BuildableName = "LocL wX.app"
-               BlueprintName = "LocL wX"
+               BuildableName = "Locl wX.app"
+               BlueprintName = "Locl wX"
                ReferencedContainer = "container:locl-wx.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04A69A4B1BF94B1900265CAC"
-            BuildableName = "LocL wX.app"
-            BlueprintName = "LocL wX"
+            BuildableName = "Locl wX.app"
+            BlueprintName = "Locl wX"
             ReferencedContainer = "container:locl-wx.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04A69A4B1BF94B1900265CAC"
-            BuildableName = "LocL wX.app"
-            BlueprintName = "LocL wX"
+            BuildableName = "Locl wX.app"
+            BlueprintName = "Locl wX"
             ReferencedContainer = "container:locl-wx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04A69A4B1BF94B1900265CAC"
-            BuildableName = "LocL wX.app"
-            BlueprintName = "LocL wX"
+            BuildableName = "Locl wX.app"
+            BlueprintName = "Locl wX"
             ReferencedContainer = "container:locl-wx.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

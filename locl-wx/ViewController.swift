@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class ViewController: UIViewController {
     
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var barometerLbl: UILabel!
     @IBOutlet weak var headerView: UIView!
     
+    @IBOutlet weak var backgroundImg: UIImageView!
+    
     var weather: Weather!
 
     override func viewDidLoad() {
@@ -36,11 +39,8 @@ class ViewController: UIViewController {
         // Create our weather object and then
         // fire off web request
         weather = Weather(location: "Bragg City, Mo", zipcode: "63827")
-        weather.downloadWeatherDetails { () -> () in
-            self.updateUI()
-        }
+        self.refreshData()
     }
-
 
     func updateUI() {
         
@@ -59,7 +59,41 @@ class ViewController: UIViewController {
         windDirectionLbl.text = "\(weather.windDirection)"
         humidityLbl.text = "\(weather.humidity)%"
         barometerLbl.text = "\(weather.pressure)"
+        
+        updateBackgroundImage()
 
+    }
+    @IBAction func updateBtnTapped(sender: UIButton) {
+        self.refreshData()
+    }
+    
+    func refreshData() {
+        // Show busy spinner
+        SwiftSpinner.show("Downloading weather...")
+        
+        weather.downloadWeatherDetails { () -> () in
+            self.updateUI()
+            
+            // Dismiss busy spinner after ui is updated
+            SwiftSpinner.hide()
+        }
+    }
+    
+    // Depending on conditions (clear, cloudy, rain, snow)
+    // update the background.
+    func updateBackgroundImage() {
+        switch weather.icon {
+        case "01d", "01n":
+            backgroundImg.image = UIImage(named: "ClearBG")
+        case "02d", "02n", "03d", "03n", "04d", "04n":
+            backgroundImg.image = UIImage(named: "CloudyBG")
+        case "09d", "09n", "10d", "10n", "11d", "11n", "50d", "50n":
+            backgroundImg.image = UIImage(named: "RainyBG")
+        case "13d", "13n":
+            backgroundImg.image = UIImage(named: "SnowyBG")
+        default:
+            backgroundImg.image = UIImage(named: "ClearBG")
+        }
     }
 }
 

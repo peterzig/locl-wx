@@ -32,7 +32,7 @@
 		047D9D681BFA431B00E1405F /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		047D9D691BFA431B00E1405F /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
 		047D9D6A1BFA431B00E1405F /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
-		04A69A4C1BF94B1900265CAC /* LocL wX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LocL wX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A69A4C1BF94B1900265CAC /* Locl wX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Locl wX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A69A4F1BF94B1900265CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A69A511BF94B1900265CAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04A69A541BF94B1900265CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		04A69A4D1BF94B1900265CAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04A69A4C1BF94B1900265CAC /* LocL wX.app */,
+				04A69A4C1BF94B1900265CAC /* Locl wX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04A69A4B1BF94B1900265CAC /* LocL wX */ = {
+		04A69A4B1BF94B1900265CAC /* Locl wX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "LocL wX" */;
+			buildConfigurationList = 04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "Locl wX" */;
 			buildPhases = (
 				B94D8781CC972DF39796331C /* Check Pods Manifest.lock */,
 				04A69A481BF94B1900265CAC /* Sources */,
@@ -173,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = "LocL wX";
+			name = "Locl wX";
 			productName = "locl-wx";
-			productReference = 04A69A4C1BF94B1900265CAC /* LocL wX.app */;
+			productReference = 04A69A4C1BF94B1900265CAC /* Locl wX.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04A69A4B1BF94B1900265CAC /* LocL wX */,
+				04A69A4B1BF94B1900265CAC /* Locl wX */,
 			);
 		};
 /* End PBXProject section */
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "LocL wX" */ = {
+		04A69A5E1BF94B1900265CAC /* Build configuration list for PBXNativeTarget "Locl wX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04A69A5F1BF94B1900265CAC /* Debug */,
