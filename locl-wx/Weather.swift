@@ -211,7 +211,7 @@ class Weather {
                 
                 if let dt = dict["dt"] as? Double {
                     // Format unix datestamp into three different objects, ie.
-                    // Date (November 15, 2015
+                    // Date (November 15, 2015)
                     // Day (Monday)
                     // Time (9:42 AM)
                     let date = NSDate(timeIntervalSince1970: dt)
